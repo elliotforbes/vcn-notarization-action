@@ -1,0 +1,14 @@
+name: 'VCN Notarization'
+description: 'An action that allows you to notarize dockerfiles and build artefacts using CodeNotary VCN service'
+inputs:
+  file:
+    description: 'The dockerfile we wish to notarize'
+    required: false
+outputs:
+  signed-hash: 
+    description: 'The vcn signed hash generated from the file or docker image'
+runs:
+  using: docker
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.file }}

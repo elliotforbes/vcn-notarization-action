@@ -2,6 +2,11 @@
 
 set -eoux pipefail
 
+export FILE=$1
+export VCN_USER=$2
+export VCN_PASSWORD=$3
+export VCN_NOTARIZATION_PASSWORD=$3
+
 setup() {
     curl -L -o /tmp/vcn https://github.com/vchain-us/vcn/releases/download/v0.9.4/vcn-v0.9.4-linux-amd64-static
     CHECKSUM=$(sha256sum /tmp/vcn | cut -d " " -f 1)

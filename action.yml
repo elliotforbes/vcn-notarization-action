@@ -1,6 +1,5 @@
 name: 'VCN Notarization'
 description: 'An action that allows you to notarize dockerfiles and build artefacts using CodeNotary VCN service'
-
 inputs:
   file:
     description: 'The dockerfile we wish to notarize'

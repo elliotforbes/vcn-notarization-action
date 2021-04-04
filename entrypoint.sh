@@ -11,13 +11,8 @@ setup() {
 
 main() { 
     echo | /tmp/vcn login
-    /tmp/vcn n -p test.sh
+    /tmp/vcn n -p $1
 }
-
-ls
-pwd
-
-echo $*
 
 setup
 main

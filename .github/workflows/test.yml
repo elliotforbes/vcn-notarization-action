@@ -18,11 +18,4 @@ jobs:
         with:
           vcn_username: ${{ secrets.VCN_USERNAME }}
           vcn_password: ${{ secrets.VCN_PASS }}
-          file: temp.txt # or docker://myimage
-      
-      # - name: Notarize dockerfile
-      #   uses: elliotforbes/vcn-notarization-action@master
-      #   with:
-      #     vcn_username: ${{ secrets.VCN_USERNAME }}
-      #     vcn_password: ${{ secrets.VCN_PASS }}
-      #     file: temp.txt # or docker://myimage
+          file: temp.txt     

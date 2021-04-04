@@ -16,6 +16,7 @@ setup() {
 }
 
 main() { 
+    echo $VCN_USER
     /tmp/vcn login
     /tmp/vcn n -p --attr GitHub="${GITHUB_SHA:0:7}" docker://forbsey/notarized-image:latest
 }

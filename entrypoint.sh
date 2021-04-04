@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eou pipefail
+set -eoux pipefail
 
 setup() {
     curl -L -o /tmp/vcn https://github.com/vchain-us/vcn/releases/download/v0.9.4/vcn-v0.9.4-linux-amd64-static

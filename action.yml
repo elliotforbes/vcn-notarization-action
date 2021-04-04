@@ -19,10 +19,12 @@ outputs:
 runs:
   using: docker
   image: 'Dockerfile'
+  env:
+    VCN_USER: ${{ inputs.vcn_username }}
+    VCN_PASSWORD: ${{ inputs.vcn_password }}
+    VCN_NOTARIZATION_PASSWORD: ${{ inputs.vcn_password }}
   args: 
     - ${{ inputs.file }}
-    - ${{ inputs.vcn_username }}
-    - ${{ inputs.vcn_password }}
 
 branding: 
   icon: 'check'

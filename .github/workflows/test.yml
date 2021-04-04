@@ -14,15 +14,8 @@ jobs:
           echo "Hello world" > temp.txt
 
       - name: Notarize file
-        uses: elliotforbes/vcn-notarization-action@master
+        uses: elliotforbes/vcn-notarization-action@dev
         with:
           vcn_username: ${{ secrets.VCN_USERNAME }}
           vcn_password: ${{ secrets.VCN_PASS }}
-          file: temp.txt # or docker://myimage
-      
-      # - name: Notarize dockerfile
-      #   uses: elliotforbes/vcn-notarization-action@master
-      #   with:
-      #     vcn_username: ${{ secrets.VCN_USERNAME }}
-      #     vcn_password: ${{ secrets.VCN_PASS }}
-      #     file: temp.txt # or docker://myimage
+          file: temp.txt     

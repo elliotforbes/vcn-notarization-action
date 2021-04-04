@@ -4,11 +4,17 @@ inputs:
   file:
     description: 'The dockerfile we wish to notarize'
     required: false
+
 outputs:
   signed-hash: 
     description: 'The vcn signed hash generated from the file or docker image'
+
 runs:
   using: docker
   image: 'Dockerfile'
   args: 
     - ${{ inputs.file }}
+
+branding: 
+  icon: 'check'
+  color: blue

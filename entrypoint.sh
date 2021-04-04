@@ -14,6 +14,10 @@ main() {
     /tmp/vcn n -p test.sh
 }
 
+ls
+pwd
+
+echo $*
 
 setup
 main

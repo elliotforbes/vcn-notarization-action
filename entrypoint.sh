@@ -10,7 +10,6 @@ setup() {
 }
 
 main() { 
-    echo $VCN_USER
     echo | /tmp/vcn login
     /tmp/vcn n -p test.sh
 }

@@ -10,6 +10,7 @@ setup() {
 }
 
 main() { 
+    echo $VCN_USER
     VCN_USER=$VCN_USER VCN_PASSWORD=$VCN_PASSWORD /tmp/vcn login
     VCN_NOTARIZATION_PASSWORD=$VCN_NOTARIZATION_PASSWORD /tmp/vcn n -p --attr GitHub="${GITHUB_SHA:0:7}" docker://forbsey/notarized-image:latest
 }

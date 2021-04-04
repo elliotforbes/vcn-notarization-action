@@ -14,5 +14,10 @@ main() {
     /tmp/vcn n -p $1
 }
 
+if [ $# -eq 0 ];
+then
+    exit 0
+fi
+
 setup
-main
+main $1

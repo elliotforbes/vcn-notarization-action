@@ -1,0 +1,28 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-usage:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: create file
+        run: |
+          echo "Hello world" > temp.txt
+
+      - name: Notarize file
+        uses: elliotforbes/vcn-notarization-action@master
+        with:
+          vcn_username: ${{ secrets.VCN_USERNAME }}
+          vcn_password: ${{ secrets.VCN_PASS }}
+          file: temp.txt # or docker://myimage
+      
+      # - name: Notarize dockerfile
+      #   uses: elliotforbes/vcn-notarization-action@master
+      #   with:
+      #     vcn_username: ${{ secrets.VCN_USERNAME }}
+      #     vcn_password: ${{ secrets.VCN_PASS }}
+      #     file: temp.txt # or docker://myimage

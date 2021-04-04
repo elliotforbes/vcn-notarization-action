@@ -15,4 +15,5 @@ main() {
     /tmp/vcn n -p --attr GitHub="${GITHUB_SHA:0:7}" docker://forbsey/notarized-image:latest
 }
 
+setup
 main

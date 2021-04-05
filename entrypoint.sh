@@ -2,7 +2,6 @@
 
 set -euox pipefail
 
-ls
-pwd
+echo $VCN_USER
 
 echo "hello world"

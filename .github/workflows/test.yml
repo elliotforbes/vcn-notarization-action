@@ -3,19 +3,19 @@ name: test
 on:
   push:
     branches:
-      - dev
+      - youtube
 
 jobs:
   test-usage:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: create file
         run: |
-          echo "Hello world" > temp.txt
+          echo "hello world" > temp.txt
 
       - name: Notarize file
-        uses: elliotforbes/vcn-notarization-action@dev
+        uses: elliotforbes/vcn-notarization-action@youtube
         with:
-          vcn_username: ${{ secrets.VCN_USERNAME }}
-          vcn_password: ${{ secrets.VCN_PASS }}
-          file: temp.txt     
+          vcn_username: username
+          vcn_password: password
+          file: temp.txt

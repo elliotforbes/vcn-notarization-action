@@ -1,20 +1,20 @@
 name: 'VCN Notarization'
-description: 'An action that allows you to notarize dockerfiles and build artefacts using CodeNotary VCN service'
+description: 'An action that allows you to notarize dockerfiles and build artefacts using CodeNotary VCN'
 
 inputs:
   file:
-    description: 'The dockerfile we wish to notarize'
+    description: 'The file or dockerfile we wish to notarize'
     required: true
   vcn_username:
-    description: 'The username for your vcn account'
+    description: 'the vcn username'
     required: true
   vcn_password:
-    description: 'The password for your vcn account'
+    description: 'the vcn password'
     required: true
 
 outputs:
-  signed-hash: 
-    description: 'The vcn signed hash generated from the file or docker image'
+  signed-hash:
+    description: 'the vcn signed hash generated from the file or docker image'
 
 runs:
   using: docker
@@ -23,9 +23,9 @@ runs:
     VCN_USER: ${{ inputs.vcn_username }}
     VCN_PASSWORD: ${{ inputs.vcn_password }}
     VCN_NOTARIZATION_PASSWORD: ${{ inputs.vcn_password }}
-  args: 
+  args:
     - ${{ inputs.file }}
 
-branding: 
+branding:
   icon: 'check'
   color: blue

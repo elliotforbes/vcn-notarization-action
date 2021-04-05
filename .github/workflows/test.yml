@@ -16,6 +16,6 @@ jobs:
     - name: Notarize file
       uses: elliotforbes/vcn-notarization-action@youtube
       with:
-        vcn_username: username
-        vcn_password: password
+        vcn_username: ${{ secrets.VCN_USERNAME }}
+        vcn_password: ${{ secrets.VCN_PASS }}
         file: temp.txt

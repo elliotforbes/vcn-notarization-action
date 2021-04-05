@@ -9,13 +9,13 @@ jobs:
   test-usage:
     runs-on: ubuntu-20.04
     steps:
-      - name: create file
-        run: |
-          echo "hello world" > temp.txt
+    - name: create file
+      run: |
+        echo "hello world" > temp.txt
 
-      - name: Notarize file
-        uses: elliotforbes/vcn-notarization-action@youtube
-        with:
-          vcn_username: username
-          vcn_password: password
-          file: temp.txt
+    - name: Notarize file
+      uses: elliotforbes/vcn-notarization-action@youtube
+      with:
+        vcn_username: username
+        vcn_password: password
+        file: temp.txt
